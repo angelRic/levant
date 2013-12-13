@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<!--ANIMACIÓN-->
+<script  src="js/jquery-1.8.3.min.js"></script>
+<script>
+$(document).ready(function () {
+	
+	$('.menu a').css('margin-top', '75px');
+	
+	$('.img_home').css('opacity','0');
+	$('.img_home').css('margin-top','-300px');
+	$('#logo').css('opacity','0');
+	$('#logo img').css('width','800px');
+	$('#logo img').css('margin-left','-133px');
+	$('.menu').css('opacity','0');
+	
+	$('.container').animate({opacity:1});
+	$('.img_home').animate({marginTop:0, opacity:1},1000);
+	$('.menu').animate({opacity:1},1000);
+	$('#logo img').animate({width:559, marginLeft:0},1500)
+
+	setTimeout(function(){$('.menu a#btn4').animate({marginTop:0})},1);
+	setTimeout(function(){$('.menu a#btn3').animate({marginTop:0})},200);
+	setTimeout(function(){$('.menu a#btn2').animate({marginTop:0})},400);
+	setTimeout(function(){$('.menu a#btn1').animate({marginTop:0})},600);
+	setTimeout(function(){$('#logo').animate({opacity:1},1000)},800);
+	//width="559" height="128" 
+})
+</script>
+</head>
+
+<body>
+
+<div class="container">
+<div id="logo" style="position:absolute; z-index:10; margin-top:250px; margin-left:253px;"><img src="img/logo_home.png" /></div>
+  <img class="img_home" src="img/home.jpg" width="1024" height="643" /> 
+  <div class="menu" style="width:1024px;">
+  <a id="btn1" style="background:#feb716" href="proyecto.html"><img src="img/icon_proyecto.png" width="70" height="70" /></a>
+  <a id="btn2" style="background:#e62238" href="galeria.html"><img src="img/icon_galeria.png" width="70" height="70" border="0" /></a>
+  <a id="btn3" style="background:#00bbdd" href="video.html"><img src="img/icon_video.png" width="70" height="70" border="0" /></a>
+  <a id="btn4" style="background:#a9228e" href="ubicacion.html"><img src="img/icon_ubicacion.png" width="70" height="70" border="0" /></a></div>
+   
+  <!-- end .container --></div>
+</body>
+</html>
